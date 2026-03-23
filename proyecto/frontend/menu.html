@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catering Studio | Menu</title>
+    <link rel="stylesheet" href="/web/styles.css" />
+  </head>
+  <body data-page="menu">
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/web/">Catering Studio</a>
+        <nav class="topnav">
+          <a href="/web/news.html">Noticias</a>
+          <a href="/web/about.html">Nosotros</a>
+          <a href="/web/resumen.html#history">Historial</a>
+        </nav>
+      </header>
+
+      <main class="flow-layout">
+        <section class="progress-bar">
+          <div class="progress-step">1. Region y fecha</div>
+          <div class="progress-step active">2. Menu e invitados</div>
+          <div class="progress-step">3. Preferencias</div>
+          <div class="progress-step">4. Resumen y confirmacion</div>
+        </section>
+
+        <section class="split-panel">
+          <div class="content-panel">
+            <p class="eyebrow">Paso 2</p>
+            <h1>Selecciona el menu ideal y estima la asistencia.</h1>
+            <p class="page-subtitle">Cada menu se refleja luego en el dashboard financiero con precio base por persona.</p>
+            <div id="cuisineSummary" class="message success"></div>
+
+            <div class="field-grid">
+              <label class="field full">
+                Cantidad estimada de invitados
+                <input id="guest_count" type="number" min="1" />
+              </label>
+              <label class="field full">
+                Configuración de servicio
+                <select id="service_configuration_id"></select>
+              </label>
+            </div>
+
+            <div id="menuList" class="menu-grid"></div>
+
+            <div class="nav-actions">
+              <a class="secondary-button" href="/web/regions.html">Volver</a>
+              <button id="continueMenu" class="primary-button" type="button">Continuar a preferencias</button>
+            </div>
+            <div id="pageMessage" class="message"></div>
+          </div>
+          <aside class="info-side">
+            <div class="wide-visual media-buffet"></div>
+            <div class="timeline-card">
+              <h3>Indicadores en esta etapa</h3>
+              <div class="timeline-item">Calculo de porciones automáticas basado en invitados.</div>
+              <div class="timeline-item">Costo base por persona ligado al menu elegido.</div>
+              <div class="timeline-item">Preparacion del costo final segun la region guardada.</div>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+    <script src="/web/app.js"></script>
+  </body>
+</html>

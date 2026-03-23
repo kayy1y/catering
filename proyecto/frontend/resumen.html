@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catering Studio | Resumen</title>
+    <link rel="stylesheet" href="/web/styles.css" />
+  </head>
+  <body data-page="summary">
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/web/">Catering Studio</a>
+        <nav class="topnav">
+          <a href="/web/news.html">Noticias</a>
+          <a href="/web/about.html">Nosotros</a>
+          <a href="/web/resumen.html#history">Historial</a>
+        </nav>
+      </header>
+
+      <main class="flow-layout">
+        <section class="progress-bar">
+          <div class="progress-step">1. Region y fecha</div>
+          <div class="progress-step">2. Menu e invitados</div>
+          <div class="progress-step">3. Preferencias</div>
+          <div class="progress-step active">4. Resumen y confirmacion</div>
+        </section>
+
+        <section class="summary-shell">
+          <div class="content-column">
+            <p class="eyebrow">Resumen final</p>
+            <h1>Revisa el evento y guárdalo en la plataforma.</h1>
+            <p class="page-subtitle">Desde aquí puedes crear el evento, abrir el panel operativo y confirmarlo para bloquear ediciones.</p>
+            <div id="draftSummary" class="summary-grid"></div>
+            <div class="actions-row">
+              <a class="secondary-button" href="/web/configuracion.html">Volver</a>
+              <button id="saveEvent" class="primary-button" type="button">Guardar evento</button>
+              <button id="confirmEvent" class="secondary-button" type="button">Confirmar evento</button>
+            </div>
+            <div id="pageMessage" class="message"></div>
+          </div>
+          <aside class="info-side">
+            <div class="timeline-card">
+              <h3>Flujo administrativo</h3>
+              <div class="timeline-item">El sistema genera un ID único automático.</div>
+              <div class="timeline-item">El dashboard consolida alimentos, transporte y personal.</div>
+              <div class="timeline-item">Al confirmar, el evento se bloquea para edición.</div>
+            </div>
+          </aside>
+        </section>
+
+        <section class="summary-grid">
+          <div class="content-panel">
+            <div class="panel-head">
+              <div>
+                <h2>Eventos registrados</h2>
+                <p class="muted">Selecciona uno para ver su panel financiero y operativo.</p>
+              </div>
+            </div>
+            <div id="eventList" class="event-list"></div>
+          </div>
+          <div class="content-panel">
+            <div class="panel-head">
+              <div>
+                <h2>Panel del evento</h2>
+                <p class="muted">Costos, alertas y sugerencias.</p>
+              </div>
+            </div>
+            <div id="selectedEvent" class="card-stack"></div>
+          </div>
+        </section>
+
+        <section id="history" class="split-panel">
+          <div class="content-panel">
+            <div class="panel-head">
+              <div>
+                <h2>Historial y búsqueda</h2>
+                <p class="muted">Busca por código, cliente o tipo y consulta eventos anteriores.</p>
+              </div>
+            </div>
+            <div class="field-grid">
+              <label class="field">
+                Código del evento
+                <input id="search_code" type="text" placeholder="AB12CD34" />
+              </label>
+              <label class="field">
+                Cliente
+                <select id="search_client_id"></select>
+              </label>
+              <label class="field">
+                Tipo
+                <select id="search_event_type_id"></select>
+              </label>
+              <label class="field">
+                Solo históricos
+                <select id="historical_only">
+                  <option value="false">No</option>
+                  <option value="true">Sí</option>
+                </select>
+              </label>
+            </div>
+            <div class="actions-row">
+              <button id="runHistorySearch" class="primary-button" type="button">Buscar eventos</button>
+            </div>
+            <div id="historyResults" class="event-list"></div>
+          </div>
+          <aside class="info-side">
+            <div class="timeline-card">
+              <h3>Consultas disponibles</h3>
+              <div class="timeline-item">Buscar eventos por código único.</div>
+              <div class="timeline-item">Filtrar por cliente o tipo de evento.</div>
+              <div class="timeline-item">Consultar historial de eventos anteriores.</div>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+    <script src="/web/app.js"></script>
+  </body>
+</html>

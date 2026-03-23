@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catering Studio | Inicio</title>
+    <link rel="stylesheet" href="/web/styles.css" />
+  </head>
+  <body data-page="landing">
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/web/">Catering Studio</a>
+        <nav class="topnav">
+          <a href="/web/news.html">Noticias</a>
+          <a href="/web/about.html">Nosotros</a>
+          <a href="/web/resumen.html#history">Historial</a>
+          <button id="seedButton" class="ghost-button" type="button">Cargar demo</button>
+        </nav>
+      </header>
+
+      <main class="stage">
+        <section class="hero-panel">
+          <div class="hero-copy">
+            <p class="eyebrow">Experiencias gastronómicas bien organizadas</p>
+            <h1>Planifica tu catering paso a paso con una plataforma elegante y operativa.</h1>
+            <p class="lead">
+              Sigue un recorrido claro por páginas, define región, menú, invitados y revisa el costo final sin pantallas sobrepuestas.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-button" href="/web/regions.html">Contratar evento</a>
+              <a class="secondary-button" href="/web/resumen.html">Ver panel</a>
+            </div>
+            <div class="status-strip">
+              <span>API</span>
+              <strong id="apiStatus">Verificando...</strong>
+            </div>
+            <div id="globalMessage" class="message"></div>
+          </div>
+          <div class="hero-media media-sunset"></div>
+        </section>
+
+        <section class="section-grid">
+          <article class="card-grid-block">
+            <div class="section-head">
+              <h2>Escoge tu estilo culinario</h2>
+              <a href="/web/menu.html">Ir al catálogo</a>
+            </div>
+            <div class="mini-grid">
+              <a class="food-card media-italiana" href="/web/menu.html">
+                <span>Cocina Italiana</span>
+                <small>Sabores cálidos y servicio clásico</small>
+              </a>
+              <a class="food-card media-asiatica" href="/web/menu.html">
+                <span>Cocina Asiática</span>
+                <small>Montajes modernos y ligeros</small>
+              </a>
+              <a class="food-card media-americana" href="/web/menu.html">
+                <span>Cocina Americana</span>
+                <small>Eventos corporativos de alto flujo</small>
+              </a>
+              <a class="food-card media-latina" href="/web/menu.html">
+                <span>Cocina Latinoamericana</span>
+                <small>Opciones vibrantes para celebraciones</small>
+              </a>
+            </div>
+          </article>
+
+          <article class="feature-panel">
+            <div class="media-commitment feature-visual"></div>
+            <h3>Nuestro compromiso</h3>
+            <ul class="clean-list">
+              <li>Cumplimiento de tiempos y validación mínima de 72 horas.</li>
+              <li>Logística coordinada por región, personal y recursos.</li>
+              <li>Recomendaciones automáticas por alergias e invitados.</li>
+            </ul>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script src="/web/app.js"></script>
+  </body>
+</html>

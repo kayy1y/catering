@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catering Studio | Preferencias</title>
+    <link rel="stylesheet" href="/web/styles.css" />
+  </head>
+  <body data-page="config">
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/web/">Catering Studio</a>
+        <nav class="topnav">
+          <a href="/web/news.html">Noticias</a>
+          <a href="/web/about.html">Nosotros</a>
+          <a href="/web/resumen.html#history">Historial</a>
+        </nav>
+      </header>
+
+      <main class="flow-layout">
+        <section class="progress-bar">
+          <div class="progress-step">1. Region y fecha</div>
+          <div class="progress-step">2. Menu e invitados</div>
+          <div class="progress-step active">3. Preferencias</div>
+          <div class="progress-step">4. Resumen y confirmacion</div>
+        </section>
+
+        <section class="split-panel">
+          <div class="content-panel">
+            <p class="eyebrow">Paso 3</p>
+            <h1>Configura alergias y observaciones del servicio.</h1>
+            <p class="page-subtitle">Escribe cada invitado en una línea usando el formato `Nombre: alergia1,alergia2`.</p>
+            <div class="field-grid">
+              <label class="field full">
+                Invitados y alergias
+                <textarea id="guest_list" placeholder="Ana Perez: gluten,lactosa&#10;Luis Mora: nueces&#10;Carla Soto:"></textarea>
+              </label>
+              <label class="field full">
+                Preferencias especiales
+                <textarea id="preferences" placeholder="Ejemplo: mesa principal cerca del acceso, menu sin lactosa para 4 personas, servicio tipo buffet."></textarea>
+              </label>
+            </div>
+            <div class="nav-actions">
+              <a class="secondary-button" href="/web/menu.html">Volver</a>
+              <button id="continueConfig" class="primary-button" type="button">Ir al resumen</button>
+            </div>
+            <div id="pageMessage" class="message"></div>
+          </div>
+          <aside class="info-side">
+            <div class="timeline-card">
+              <h3>Inteligencia del catering</h3>
+              <div class="timeline-item">Analiza alergias registradas por invitado.</div>
+              <div class="timeline-item">Sugiere platillos compatibles de manera automática.</div>
+              <div class="timeline-item">Mantiene trazabilidad para futuras ediciones o historial.</div>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+    <script src="/web/app.js"></script>
+  </body>
+</html>

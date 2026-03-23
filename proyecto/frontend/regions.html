@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catering Studio | Region y Fecha</title>
+    <link rel="stylesheet" href="/web/styles.css" />
+  </head>
+  <body data-page="regions">
+    <div class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/web/">Catering Studio</a>
+        <nav class="topnav">
+          <a href="/web/news.html">Noticias</a>
+          <a href="/web/about.html">Nosotros</a>
+          <a href="/web/resumen.html#history">Historial</a>
+          <button id="seedButton" class="ghost-button" type="button">Cargar demo</button>
+        </nav>
+      </header>
+
+      <main class="flow-layout">
+        <section class="progress-bar">
+          <div class="progress-step active">1. Region y fecha</div>
+          <div class="progress-step">2. Menu e invitados</div>
+          <div class="progress-step">3. Preferencias</div>
+          <div class="progress-step">4. Resumen y confirmacion</div>
+        </section>
+
+        <section class="split-panel">
+          <div class="content-panel">
+            <p class="eyebrow">Paso 1</p>
+            <h1>Elige la region y el momento de tu evento.</h1>
+            <p class="page-subtitle">La plataforma usa esta informacion para recalcular menu, transporte y disponibilidad operativa.</p>
+            <form id="regionForm" class="field-grid">
+              <label class="field full">
+                Nombre del evento
+                <input id="event_name" type="text" placeholder="Boda Rivera" required />
+              </label>
+              <label class="field full">
+                Descripción
+                <textarea id="description" placeholder="Recepción formal con 80 invitados, estaciones de bienvenida y mesa principal."></textarea>
+              </label>
+              <label class="field">
+                Cliente
+                <select id="client_id" required></select>
+              </label>
+              <label class="field">
+                Tipo de evento
+                <select id="event_type_id" required></select>
+              </label>
+              <label class="field">
+                Región gastronómica
+                <select id="cuisine_region_id" required></select>
+              </label>
+              <label class="field">
+                Zona logística
+                <select id="region_id" required></select>
+              </label>
+              <label class="field">
+                Lugar
+                <input id="location" type="text" placeholder="Salón Las Palmas" required />
+              </label>
+              <label class="field full">
+                Fecha y hora
+                <input id="event_datetime" type="datetime-local" required />
+              </label>
+              <div class="nav-actions full">
+                <button id="checkAvailability" class="secondary-button" type="button">Consultar disponibilidad</button>
+              </div>
+              <div id="availabilityResult" class="message full"></div>
+              <p class="helper full">La región gastronómica define el estilo de comida del catering. La zona logística se usa para transporte y operación.</p>
+              <div class="nav-actions full">
+                <a class="secondary-button" href="/web/">Volver</a>
+                <button class="primary-button" type="submit">Continuar al menu</button>
+              </div>
+            </form>
+            <div id="pageMessage" class="message"></div>
+          </div>
+          <aside class="info-side">
+            <div class="wide-visual media-service"></div>
+            <div class="timeline-card">
+              <h3>Lo que valida el sistema</h3>
+              <div class="timeline-item">Bloquea registros con menos de 72 horas de anticipacion.</div>
+              <div class="timeline-item">Aplica costos logísticos segun la region seleccionada.</div>
+              <div class="timeline-item">Prepara el flujo para asignacion de personal y recursos.</div>
+            </div>
+          </aside>
+        </section>
+      </main>
+    </div>
+    <script src="/web/app.js"></script>
+  </body>
+</html>
